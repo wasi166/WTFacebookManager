@@ -21,3 +21,25 @@ A simple Singleton class which can give you all the basic operation for FBSDKMan
 
 
 
+# Logging in
+     
+     let manager = WTFacebookManager.sharedInstance
+     manager.login(readPermissions: ["public_profile","email"], fromViewController: yourViewController) { (success) in
+            if success 
+            {
+                print("Logged in successfully with access token : \(manager.currentToken)")
+            }
+            else
+            {
+                print("Error in logging in")
+            }
+        }
+The success variable indicates whether the login went successful or nor.
+
+# Getting the Info of User
+
+
+
+
+
+
